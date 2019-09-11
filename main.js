@@ -2,6 +2,11 @@ $(document).ready(function(){
 
 	modal = new Modal();
 	
+	/**
+	 * передаем классу модальных окон обработчик 
+	 * который необходимо вызвать после открытия 
+	 * окна с идентификатором 'callback'
+	 */
 	modal.setHandler('callback', function(contain){
 
 		// тело функции для постобработки открываемого модального окна
@@ -76,6 +81,10 @@ $(document).ready(function(){
 		var ident = $(this).data().ident;
 		var handler = $(this).data('handler');
 		
+		/**
+		 * открываем модальное окно с необходимыми
+		 * параметрами
+		 */
         modal.open(ident, {
 			handler: handler,
 			url: $(this).attr('href'),
