@@ -1,9 +1,16 @@
+/**
+ * своего рода класс для обработки исключений модальных окон
+ */
 ModalException = function(message)
 {
 
 	this.message = message;
 
 }
+
+/**
+ * своего рода класс для работы с модальными окнами
+ */
 Modal = function(options = {})
 {
 
